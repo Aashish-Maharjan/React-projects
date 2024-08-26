@@ -1,6 +1,6 @@
 import Card from "./Card";
 
-const recepies=[
+export const recepies=[
     {
         id:1,
         name:"Food Bowl" ,
