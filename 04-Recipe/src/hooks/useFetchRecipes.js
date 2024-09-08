@@ -26,6 +26,7 @@ const useFetchRecipes=()=>{
 		} catch (error) {
 			console.error(error);
 		}
-	}
+  }
+  return[recipes];
 }
 export default useFetchRecipes
