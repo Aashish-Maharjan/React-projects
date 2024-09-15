@@ -7,13 +7,18 @@ import { useEffect } from "react";
 
 
 export default function HomePage(){
-  const[fetchRecipes,{data,loading,error}]=useFetchRecipes();
+  const[fetchRecipes,{recipes,loading,error}]=useFetchRecipes();
+  
   useEffect(()=>{
 		fetchRecipes();
   },[]);
-  
+
+  useEffect(()=>{
+		
+  },[recipes]);
+
   const handleSearch=(searchTerm)=>{
-    console.log("called",searchTerm);
+    
     if(searchTerm){
       fetchRecipes(searchTerm);
     }
@@ -23,7 +28,7 @@ export default function HomePage(){
         <>
           <Header handleSearch={handleSearch}/>
           {loading && <Loading />}
-          {data && <CardList recipes={recipes}/>}
+          {recipes && <CardList recipes={recipes}/>}
           {error && <p>{error}</p>}
         </>
         );

@@ -282,3 +282,8 @@ nav a {
   justify-content: space-between;
   margin-top: 10px;
 }
+.nutritional-facts-container{
+  display: flex;
+  justify-content:space-between;
+  margin-top:10px;
+}

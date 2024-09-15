@@ -24,7 +24,9 @@ const useFetchRecipe = () => {
       const reqOptions = { ...options };
       reqOptions.params.id = id;
       const response = await axios.request(reqOptions);
-      setRecipe(response.data);
+      console.log(response);
+      setRecipe(response.data.results);
+      
       setLoading(false);
     } catch (err) {
       setError(err.message);
@@ -32,7 +34,7 @@ const useFetchRecipe = () => {
     }
   };
 
-  return [fetchRecipe, { data: recipe, loading, error }];
+  return [fetchRecipe, {recipe, loading, error }];
 };
 
 export default useFetchRecipe;
