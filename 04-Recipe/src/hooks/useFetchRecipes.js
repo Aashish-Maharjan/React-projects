@@ -5,7 +5,7 @@ const options = {
     url: 'https://tasty.p.rapidapi.com/recipes/list',
     params: {
       from: '0',
-      size: '20'
+      size: '50'
         },
     headers: {
       'x-rapidapi-key': '528b902d9dmsh61a9d41626d9e66p1dc07bjsn0779192f925e',
